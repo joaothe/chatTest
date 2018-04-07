@@ -6,7 +6,9 @@ users = [];
 connections = [];
 
 server.listen(process.env.PORT || 3000);
-console.log('Server running...');
+console.log('Server running! Open a browser and navigate to localhost:3000.');
+
+app.use(express.static("."));
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
